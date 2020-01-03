@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="725" height="518" viewBox="0 0 725 518">
+  <g id="Bilde" transform="translate(-583.5 -204.5)">
+    <g id="Group_1" data-name="Group 1" transform="translate(593 204)">
+      <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(-7 8)" opacity="0.752">
+        <path id="Rectangle_11" data-name="Rectangle 11" d="M25,0H638a12,12,0,0,1,12,12V89a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V25A25,25,0,0,1,25,0Z" transform="translate(0 9)" fill="#fff" stroke="#025381" stroke-linecap="round" stroke-width="5"/>
+        <rect id="Rectangle_12" data-name="Rectangle 12" width="385" height="83" transform="translate(330)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-width="15"/>
+        <rect id="Rectangle_13" data-name="Rectangle 13" width="1" height="83" transform="translate(656 6)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-width="15"/>
+        <path id="Rectangle_10" data-name="Rectangle 10" d="M25,0H461A250,250,0,0,1,711,250V474a25,25,0,0,1-25,25H250A250,250,0,0,1,0,249V25A25,25,0,0,1,25,0Z" transform="translate(0 9)" fill="none" stroke="#025381" stroke-linecap="round" stroke-width="5"/>
+      </g>
+    </g>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="15" cy="15" r="15" transform="translate(623 250)" fill="#ff6259"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="15" cy="15" r="15" transform="translate(726 250)" fill="#28cf42"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="15" cy="15" r="15" transform="translate(675 250)" fill="#ffbd2d"/>
+    <text id="Valler" transform="translate(636 452)" fill="#012635" font-size="90" font-family="Helvetica-Bold, Helvetica" font-weight="700" opacity="0.901"><tspan x="0" y="0">Valler</tspan></text>
+    <text id="Webdesign" transform="translate(741 630)" fill="#012635" font-size="90" font-family="Helvetica-Bold, Helvetica" font-weight="700" opacity="0.901"><tspan x="0" y="0">Webdesign</tspan></text>
+    <path id="Path_2" data-name="Path 2" d="M0,37Z" transform="translate(838.072 675)" fill="#fff" stroke="#005283" stroke-width="15"/>
+  </g>
+</svg>

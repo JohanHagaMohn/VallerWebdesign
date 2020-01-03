@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1156" height="2814" viewBox="0 0 1156 2814">
+  <g id="Clouds" transform="translate(278 -342)">
+    <path id="Rectangle_28" data-name="Rectangle 28" d="M15,0H497a15,15,0,0,1,15,15v0a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0v0A15,15,0,0,1,15,0Z" transform="translate(366 1038)" fill="rgba(0,83,129,0.15)" opacity="0.9"/>
+    <path id="Rectangle_24" data-name="Rectangle 24" d="M7.5,0H217a0,0,0,0,1,0,0V7.5a7.5,7.5,0,0,1-7.5,7.5H7.5A7.5,7.5,0,0,1,0,7.5v0A7.5,7.5,0,0,1,7.5,0Z" transform="translate(-156 342)" fill="rgba(0,83,129,0.15)"/>
+    <path id="Path_4" data-name="Path 4" d="M22.543,0H326.125V7.5c0,4.142-10.093,7.5-22.543,7.5H22.543C10.093,15,0,11.642,0,7.5S10.093,0,22.543,0Z" transform="translate(-278 832)" fill="rgba(0,83,129,0.05)"/>
+    <path id="Rectangle_26" data-name="Rectangle 26" d="M7.5,0H217a0,0,0,0,1,0,0V7.5a7.5,7.5,0,0,1-7.5,7.5H7.5A7.5,7.5,0,0,1,0,7.5v0A7.5,7.5,0,0,1,7.5,0Z" transform="translate(-200 1124)" fill="rgba(0,83,129,0.05)"/>
+    <path id="Rectangle_27" data-name="Rectangle 27" d="M7.5,0H217a0,0,0,0,1,0,0V7.5a7.5,7.5,0,0,1-7.5,7.5H7.5A7.5,7.5,0,0,1,0,7.5v0A7.5,7.5,0,0,1,7.5,0Z" transform="translate(486 458)" fill="rgba(0,83,129,0.1)"/>
+    <path id="Rectangle_29" data-name="Rectangle 29" d="M7.5,0H217a0,0,0,0,1,0,0V7.5a7.5,7.5,0,0,1-7.5,7.5H7.5A7.5,7.5,0,0,1,0,7.5v0A7.5,7.5,0,0,1,7.5,0Z" transform="translate(514 1254)" fill="rgba(0,83,129,0.05)"/>
+    <path id="Rectangle_34" data-name="Rectangle 34" d="M15,0H275a15,15,0,0,1,15,15v0a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0v0A15,15,0,0,1,15,0Z" transform="translate(-270 1367)" fill="rgba(0,83,129,0.15)" opacity="0.9"/>
+    <path id="Rectangle_35" data-name="Rectangle 35" d="M15,0H98a15,15,0,0,1,15,15v0a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0v0A15,15,0,0,1,15,0Z" transform="translate(163 2272)" fill="rgba(0,83,129,0.15)" opacity="0.9"/>
+    <path id="Path_9" data-name="Path 9" d="M13.3,0H148.027c0,8.284-5.953,15-13.3,15H0C0,6.716,5.953,0,13.3,0Z" transform="translate(585.621 1828.211)" fill="rgba(0,83,129,0.05)"/>
+    <path id="Path_10" data-name="Path 10" d="M20.221,0H292.526V7.5c0,4.142-9.053,7.5-20.221,7.5H20.221C9.053,15,0,11.642,0,7.5S9.053,0,20.221,0Z" transform="translate(-140 2168.324)" fill="rgba(0,83,129,0.05)"/>
+    <path id="Path_11" data-name="Path 11" d="M11.76,0H130.923c0,8.284-5.265,15-11.76,15H0C0,6.716,5.265,0,11.76,0Z" transform="translate(-162.274 3141)" fill="rgba(0,83,129,0.25)"/>
+  </g>
+</svg>
