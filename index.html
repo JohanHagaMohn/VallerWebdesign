@@ -2,6 +2,8 @@
 <html lang="no">
 
 <head>
+    <link rel="stylesheet" href="index.css">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon-16x16.png">
@@ -23,26 +25,79 @@
 <body>
     <header>
         <div id="logo">
-            <img src="">
+            <img src="/media/logo.svg" alt="Logo">
         </div>
         <nav>
+            <ul>
+                <li><a href="#tjeneste">Hjem</a></li>
+                <li><a href="#om">Om</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <section id="tjeneste">
+            <img src="/media/design.svg" alt="Design">
+            <h2>Din webdesignservice fra Valler.</h2>
         </section>
         <section id="om">
+            <h1>Om Valler Webdesign.</h1>
             <div id="beskrivelse">
+                <p>
+                    Valler Webdesign er en ungdomsbedrift som hjelper lokalbedrifter skape unike og profesjonelle
+                    nettsider.
+                    <br><br>
+                    Vårt mål er å gjøre det enkelt og rimelig for småbedrifter å tiltrekke kunder i en digital verden.
+                </p>
             </div>
         </section>
         <aside id="medlemmer">
+            <h3>Johan Haga Mohn</h3>
+            <h4>Daglig leder</h4>
+            <h3>Sam Rouppe</h3>
+            <h4>Personalsjef</h4>
+            <h3>Jesper Vigtel Hølland</h3>
+            <h4>Designer</h4>
+            <h3>Kristian Aastveit</h3>
+            <h4>Designer</h4>
+            <h3>Viktor Alsing Seland</h3>
+            <h4>Designer</h4>
+            <h3>Benjamin Wiig</h3>
+            <h4>Designer</h4>
+            <h3>Andreas Haraldsrud</h3>
+            <h4>Mentor</h4>
         </aside>
         <section id="kontakt">
-            <div id="skjema">
-            </div>
+            <h1>Kontakt oss</h1>
+            <form id="skjema">
+                <div id="melding">
+                    <textarea name="melding" form="skjema" required></textarea>
+                    <label for="melding">
+                        <span>Melding:</span>
+                    </label>
+                </div>
+                <div id="email">
+                    <input type="email" name="email" required>
+                    <label for="email">
+                        <span>Email:</span>
+                    </label>
+                </div>
+                <div id="send">
+                    <button type="submit">Send</button>
+                    <img src="media/send.svg" alt="">
+                </div>
+            </form>
+        </section>
+        <section id="bakgrunn">
+            <img id="web" src="media/skyer-web.svg" alt="">
+            <img id="tablet" src="media/skyer-tablet.svg" alt="">
+            <img id="mobil" src="media/skyer-mobil.svg" alt="">
         </section>
     </main>
     <footer>
+        <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=924003138">
+            <h5>© 2020 Valler Webdeisng UB</h5>
+        </a>
     </footer>
 </body>
 
