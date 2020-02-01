@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+* h1, * h3, * input {
+  color: rgba(2, 39, 55, 0.9);
+}
+
+* h2, * h4, * h5, * label, * a, * textarea, * #beskrivelse > p {
+  color: #707070;
+}
+
+* button {
+  color: white;
+}
+
+* h1 {
+  font-size: 50px;
+}
+
+* h2 {
+  font-size: 35px;
+}
+
+* h3 {
+  font-size: 25px;
+}
+
+* a, * label, * h4, * button, * input, * textarea, * #beskrivelse > p {
+  font-size: 18px;
+}
+
+* header nav ul li a {
+  font-size: 18px !important;
+}
+
+* h5 {
+  font-size: 13px;
+}
+
+* a {
+  text-decoration: none;
+}
+
+* a, * label, * button, * input {
+  font-weight: bold;
+}
+
+* textarea, * #beskrivelse > p {
+  font-weight: light;
+  line-height: 4.3vw;
+  letter-spacing: 0.25vw;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html.menu {
+  overflow-y: hidden;
+}
+
+html.menu header {
+  height: 100vh;
+}
+
+body header {
+  width: 100%;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #707070;
+  background-color: white;
+}
+
+body header a {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  width: 100%;
+  text-align: center;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+body header a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body header, body header * {
+  height: 8vh;
+}
+
+body header div, body header nav {
+  margin: 0 8% 0 8%;
+}
+
+body header div {
+  width: 10%;
+}
+
+body header nav {
+  width: 40%;
+}
+
+body header li {
+  width: 100%;
+  list-style: none;
+}
+
+body header, body header ul, body header div, body header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main {
+  background-image: url("media/skyer-web.svg");
+  background-repeat: no-repeat;
+  background-size: 200vh;
+  background-position: 40% 95%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". tjeneste    tjeneste  ." ". om          om        ." ". beskrivelse medlemmer ." ". kontakt     medlemmer .";
+  -ms-grid-columns: 10vw 40vw 40vw 10vw;
+      grid-template-columns: 10vw 40vw 40vw 10vw;
+  -ms-grid-rows: 92vh 35vh 65vh 96vh;
+      grid-template-rows: 92vh 35vh 65vh 96vh;
+}
+
+body main #tjeneste {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: tjeneste;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  vertical-align: middle;
+}
+
+body main #tjeneste * {
+  width: 100%;
+}
+
+body main #tjeneste img {
+  height: 50vh;
+}
+
+body main #om {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: om;
+  padding: 10vh 0 10vh 0;
+}
+
+body main #beskrivelse {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: beskrivelse;
+}
+
+body main #om, body main #kontakt h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+body main #beskrivelse, body main #skjema textarea {
+  background: white;
+  padding: 30px;
+  border: 4px solid rgba(2, 83, 129, 0.75);
+  border-radius: 25px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+body main #beskrivelse:not(#beskrivelse):focus, body main #beskrivelse:not(#beskrivelse):valid, body main #skjema textarea:not(#beskrivelse):focus, body main #skjema textarea:not(#beskrivelse):valid {
+  border-color: #025381;
+}
+
+body main #medlemmer {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: medlemmer;
+  margin-left: 11vw;
+}
+
+body main #medlemmer h4 {
+  margin-top: 3vh;
+}
+
+body main #medlemmer h4:not(:last-child) {
+  margin-bottom: 13.9vh;
+}
+
+body main #kontakt {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: kontakt;
+}
+
+body main #kontakt h1 {
+  margin: 10vh 0 10vh 0;
+}
+
+body main #kontakt #skjema {
+  height: 60.5vh;
+  position: relative;
+}
+
+body main #kontakt #skjema #melding textarea {
+  margin-top: 5vh;
+  width: 100%;
+  resize: none;
+  height: 45vh;
+}
+
+body main #kontakt #skjema input, body main #kontakt #skjema textarea, body main #kontakt #skjema button {
+  outline: none;
+}
+
+body main #kontakt #skjema span {
+  position: absolute;
+  left: 0;
+  margin: 7px 0 0 11px;
+}
+
+body main #kontakt #skjema #email {
+  margin-top: 4.9vh;
+  width: 80%;
+}
+
+body main #kontakt #skjema #email input {
+  height: 5vh;
+  margin: 0 2% 0 19%;
+  width: 75%;
+  border: none;
+}
+
+body main #kontakt #skjema #email label::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  bottom: 0;
+  left: 0;
+  border: 2px solid #025381;
+  opacity: 0.75;
+  border-radius: 4px 4px 0 0;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+body main #kontakt #skjema #email input:focus + label::after, body main #kontakt #skjema #email input:valid + label::after {
+  opacity: 1;
+}
+
+body main #kontakt #skjema #send {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+body main #kontakt #skjema #send button {
+  background-color: #025381;
+  opacity: 0.75;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  cursor: pointer;
+  height: 5vh;
+  width: 9vw;
+  border: none;
+  border-radius: 25px 250px 25px 250px;
+}
+
+body main #kontakt #skjema #send button:hover {
+  opacity: 1;
+}
+
+body footer {
+  height: 4vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #707070;
+}
+
+body footer h5 {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+body footer h5:hover {
+  color: #022737;
+}
+
+@media only screen and (min-width: 780px) and (max-width: 880px) {
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    margin-top: 3.55vh !important;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    margin-top: 2.78vh !important;
+  }
+  a, label, h4, button, input, textarea, #beskrivelse > p {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 740px) {
+  html body header nav {
+    width: 50%;
+  }
+  #email label span {
+    -webkit-transform: translateY(-200%) !important;
+            transform: translateY(-200%) !important;
+  }
+  #email label::after {
+    width: 180% !important;
+  }
+  #email input {
+    width: 200% !important;
+  }
+  #send > button {
+    -webkit-transform: translateX(460%) !important;
+            transform: translateX(460%) !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  html body header {
+    cursor: pointer;
+    z-index: 2;
+  }
+  html body header nav {
+    width: 7vh !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    right: 0%;
+    top: 4vh;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  html body header nav, html body header nav::after, html body header nav::before {
+    -webkit-transition: all 100ms ease;
+    transition: all 100ms ease;
+    background-color: #707070;
+    height: .5vh !important;
+    border-radius: 2px;
+  }
+  html body header nav::after, html body header nav::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+  }
+  html body header nav::after {
+    top: -2vh;
+  }
+  html body header nav::before {
+    top: 2vh;
+  }
+  html body header nav ul {
+    display: none;
+  }
+  html body header:hover > nav, html body header:hover > nav::after, html body header:hover > nav::before {
+    background-color: #022737;
+  }
+  html body main {
+        grid-template-areas: ". tjeneste     ." ". om           ." ". beskrivelse  ." ". medlemmer    ." ". kontakt      .";
+    -ms-grid-columns: 10vw 80vw 10vw;
+        grid-template-columns: 10vw 80vw 10vw;
+    -ms-grid-rows: 92vh 20vh 40vh 40vh 96vh;
+        grid-template-rows: 92vh 20vh 40vh 40vh 96vh;
+  }
+  html body main #beskrivelse {
+    margin-bottom: 5vh;
+    padding: 5vh;
+  }
+  html body main #beskrivelse, html body main #skjema textarea {
+    border: 3px solid rgba(2, 83, 129, 0.75) !important;
+  }
+  html body main #email label::after {
+    border-width: 1.5px !important;
+  }
+  html body main aside#medlemmer {
+    background-color: blue;
+    width: 100%;
+    margin: 0 0 5vh 0;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 4vh;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    border: 3px solid rgba(2, 83, 129, 0.75);
+    border-radius: 25px;
+    background: white;
+    position: relative;
+    z-index: -1;
+  }
+  html body main aside#medlemmer h3, html body main aside#medlemmer h4 {
+    width: 50%;
+    height: 20%;
+    margin-top: -10px;
+  }
+  html body main aside#medlemmer h3 {
+    -ms-flex-preferred-size: 18%;
+        flex-basis: 18%;
+    font-size: 14px;
+  }
+  html body main aside#medlemmer h4 {
+    font-size: 11px;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  html body main aside#medlemmer :nth-last-child(-n+2) {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  html body main aside#medlemmer :nth-last-child(-n+2):not(h3) {
+    bottom: -10% !important;
+  }
+  html body main aside#medlemmer >
+aside#medlemmer > h3, html body main aside#medlemmer > h4 {
+    margin: 0 !important;
+  }
+  html body main h1 {
+    font-size: 35px;
+  }
+  html body main h2 {
+    font-size: 25px;
+  }
+  html body main #send button {
+    width: 200% !important;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+/*# sourceMappingURL=index.css.map */
