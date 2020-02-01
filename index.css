@@ -19,27 +19,28 @@
 }
 
 * h1 {
-  font-size: 50px;
+  font-size: 7vmin;
 }
 
 * h2 {
-  font-size: 35px;
+  font-size: 5.01vmin;
 }
 
 * h3 {
-  font-size: 25px;
+  font-size: 3.58vmin;
 }
 
 * a, * label, * h4, * button, * input, * textarea, * #beskrivelse > p {
-  font-size: 18px;
+  font-size: 2.3vmin;
 }
 
 * header nav ul li a {
-  font-size: 18px !important;
+  font-size: 2.57vmin !important;
 }
 
 * h5 {
-  font-size: 13px;
+  padding: auto;
+  font-size: auto;
 }
 
 * a {
@@ -51,25 +52,24 @@
 }
 
 * textarea, * #beskrivelse > p {
-  font-weight: light;
   line-height: 4.3vw;
   letter-spacing: 0.25vw;
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 html.hamburger {
   overflow-y: hidden;
 }
 
-html.hamburger #kontakt {
-  z-index: -1 !important;
+html.hamburger main {
+  visibility: hidden;
 }
 
 body header {
+  z-index: 2;
   width: 100%;
   position: -webkit-sticky !important;
   position: sticky !important;
@@ -84,7 +84,7 @@ body header #menu > *:not(nav) {
 }
 
 body header #menu {
-  width: 35%;
+  width: 45%;
 }
 
 body header #menu nav {
@@ -192,6 +192,16 @@ body main #beskrivelse {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: beskrivelse;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 body main #om, body main #kontakt h1 {
@@ -202,6 +212,7 @@ body main #om, body main #kontakt h1 {
 }
 
 body main #beskrivelse, body main #skjema textarea {
+  z-index: 1;
   background: white;
   padding: 30px;
   border: 4px solid rgba(2, 83, 129, 0.75);
@@ -219,6 +230,7 @@ body main #medlemmer {
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: medlemmer;
+  overflow: hidden;
   margin-left: 11vw;
 }
 
@@ -269,8 +281,8 @@ body main #kontakt #skjema #email {
 
 body main #kontakt #skjema #email input {
   height: 5vh;
-  margin: 0 2% 0 19%;
-  width: 75%;
+  margin: 0 2% 0 70px;
+  width: 21vw;
   border: none;
 }
 
@@ -337,6 +349,12 @@ body footer h5:hover {
   color: #022737;
 }
 
+@media only screen and (min-width: 880px) {
+  body header nav ul li a {
+    font-size: 2.5vh !important;
+  }
+}
+
 @media only screen and (min-width: 780px) and (max-width: 880px) {
   h3 {
     font-size: 22px;
@@ -353,8 +371,11 @@ body footer h5:hover {
   h4 {
     margin-top: 2.78vh !important;
   }
-  a, label, h4, button, input, textarea, #beskrivelse > p {
+  a, label, h4, button, input {
     font-size: 15px;
+  }
+  textarea, #beskrivelse > p {
+    font-size: 2.5vw;
   }
   h1 {
     font-size: 40px;
@@ -369,14 +390,14 @@ body footer h5:hover {
     width: 50%;
   }
   #email label span {
-    -webkit-transform: translateY(-200%) !important;
-            transform: translateY(-200%) !important;
+    -webkit-transform: translateY(-180%) !important;
+            transform: translateY(-180%) !important;
   }
   #email label::after {
     width: 180% !important;
   }
   #email input {
-    width: 200% !important;
+    width: 190% !important;
   }
   #send > button {
     -webkit-transform: translateX(460%) !important;
@@ -407,7 +428,7 @@ body footer h5:hover {
     position: absolute;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
+    z-index: 3;
   }
   body header #menu input:checked ~ span:nth-of-type(1) {
     -webkit-transform: rotate(45deg) scale(1.03);
@@ -461,7 +482,7 @@ body footer h5:hover {
     margin: 0;
     left: 0;
     top: 8vh;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: white;
   }
@@ -482,6 +503,10 @@ body footer h5:hover {
     font-size: 25px !important;
   }
   body main {
+    background-image: url("media/skyer-mobil.svg");
+    background-repeat: no-repeat;
+    background-size: 53.25vh;
+    background-position: 10% 980%;
         grid-template-areas: ". tjeneste     ." ". om           ." ". beskrivelse  ." ". medlemmer    ." ". kontakt      .";
     -ms-grid-columns: 10vw 80vw 10vw;
         grid-template-columns: 10vw 80vw 10vw;
@@ -492,6 +517,9 @@ body footer h5:hover {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: tjeneste;
+  }
+  body main #tjeneste img {
+    height: 40vh;
   }
   body main #om {
     -ms-grid-row: 2;
@@ -521,8 +549,11 @@ body footer h5:hover {
   body main #email label::after {
     border-width: 1.5px !important;
   }
+  body main #email input {
+    width: 60% !important;
+  }
   body main aside#medlemmer {
-    background-color: blue;
+    z-index: 1 !important;
     width: 100%;
     margin: 0 0 5vh 0;
     display: -webkit-box !important;
@@ -552,10 +583,10 @@ body footer h5:hover {
   body main aside#medlemmer h3 {
     -ms-flex-preferred-size: 18%;
         flex-basis: 18%;
-    font-size: 14px;
+    font-size: 2.8vw;
   }
   body main aside#medlemmer h4 {
-    font-size: 11px;
+    font-size: 2.6vw;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
   }
@@ -571,15 +602,14 @@ body footer h5:hover {
   body main aside#medlemmer :nth-last-child(-n+2):not(h3) {
     bottom: -10% !important;
   }
-  body main aside#medlemmer >
-aside#medlemmer > h3, body main aside#medlemmer > h4 {
+  body main aside#medlemmer > h4 {
     margin: 0 !important;
   }
   body main h1 {
-    font-size: 35px;
+    font-size: 7.5vw !important;
   }
   body main h2 {
-    font-size: 25px;
+    font-size: 7vw;
   }
   body main #send button {
     width: 200% !important;

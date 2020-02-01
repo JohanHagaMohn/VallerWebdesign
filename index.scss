@@ -18,22 +18,23 @@ $grå: #707070;
         color: white;
     }
     h1 {
-        font-size: 50px;
+        font-size: 7vmin;
     }
     h2 {
-        font-size: 35px;
+        font-size: 5.01vmin;
     }
     h3 {
-        font-size: 25px;
+        font-size: 3.58vmin;
     }
     a, label, h4, button, input, textarea, #beskrivelse > p {
-        font-size: 18px;
+        font-size: 2.3vmin;
     }
     header nav ul li a {
-        font-size: 18px !important;
+        font-size: 2.57vmin !important;
     }
     h5 {
-        font-size: 13px;
+        padding: auto;
+        font-size: auto;
     }
     a {
         text-decoration: none;
@@ -42,30 +43,28 @@ $grå: #707070;
         font-weight: bold;
     }
     textarea, #beskrivelse > p {
-        font-weight: light;
         line-height: 4.3vw;
         letter-spacing: 0.25vw;
     }
 }
-
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     &.hamburger {
         overflow-y: hidden;
-        #kontakt {
-            z-index: -1 !important;
+        main {
+            visibility: hidden;
         }
     }
 }
 
 body {
     header {
+        z-index: 2;
         #menu > *:not(nav) {
             display: none;
         }
         #menu {
-            width: 35%;
+            width: 45%;
             nav {
                 width: 100%;
             }
@@ -138,12 +137,16 @@ body {
         }
         #beskrivelse {
             grid-area: beskrivelse;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
         #om, #kontakt h1 {
             align-self: center;
             text-align: center;
         }
         #beskrivelse, #skjema textarea {
+            z-index: 1;
             background: white;
             padding: 30px;
             border: 4px solid rgba($lyseblå, 0.75);
@@ -155,6 +158,7 @@ body {
         }
         #medlemmer {
             grid-area: medlemmer;
+            overflow: hidden;
             margin-left: 11vw;
             h4 {
                 margin-top: 3vh;
@@ -190,8 +194,8 @@ body {
                     width: 80%;
                     input {
                         height: 5vh;
-                        margin: 0 2% 0 19%;
-                        width: 75%;
+                        margin: 0 2% 0 70px;
+                        width: 21vw;
                         border: none;
                     }
                     label::after {
@@ -246,6 +250,11 @@ body {
     }
 }
 
+@media only screen and (min-width: 880px) {
+    body header nav ul li a {
+        font-size: 2.5vh !important;
+    }
+}
 @media only screen and (min-width: 780px) and (max-width: 880px) {
     h3 {
         font-size: 22px;
@@ -261,8 +270,11 @@ body {
     h4 {
         margin-top: 2.78vh !important;
     }
-    a, label, h4, button, input, textarea, #beskrivelse > p {
+    a, label, h4, button, input {
         font-size: 15px;
+    }
+    textarea, #beskrivelse > p {
+        font-size: 2.5vw;
     }
     h1 {
         font-size: 40px;
@@ -276,13 +288,13 @@ body {
         width: 50%;
     }
     #email label span {
-        transform: translateY(-200%) !important;
+        transform: translateY(-180%) !important;
     }
     #email label::after {
         width: 180% !important;
     }
     #email input {
-        width: 200% !important;
+        width: 190% !important;
     }
     #send > button {
         transform: translateX(460%) !important;
@@ -305,7 +317,7 @@ body {
                     position: absolute;
                     cursor: pointer;
                     opacity: 0;
-                    z-index: 2;
+                    z-index: 3;
                     &:checked ~ span:nth-of-type(1) {
                         transform: rotate(45deg) scale(1.03);
                     }
@@ -354,7 +366,7 @@ body {
                     margin: 0;
                     left: 0;
                     top: 8vh;
-                    height: 100vh;
+                    height: 100%;
                     width: 100vw;
                     background-color: white;
                 }
@@ -372,6 +384,10 @@ body {
             }
         }
         main {
+            background-image: url("media/skyer-mobil.svg");
+            background-repeat: no-repeat;
+            background-size: 53.25vh;
+            background-position: 10% 980%;
             grid-template-areas:
             ". tjeneste     ."
             ". om           ."
@@ -382,6 +398,9 @@ body {
             grid-template-rows: 92vh 20vh 40vh 40vh 96vh;
             #tjeneste {
                 grid-area: tjeneste;
+                img {
+                    height: 40vh;
+                }
             }
             #om {
                 grid-area: om;
@@ -403,8 +422,11 @@ body {
             #email label::after {
                 border-width: 1.5px !important;
             }
+            #email input {
+                width: 60% !important;
+            }
             aside#medlemmer {
-                background-color: blue;
+                z-index: 1 !important;
                 width: 100%;
                 margin: 0 0 5vh 0;
                 display: flex !important;
@@ -424,10 +446,10 @@ body {
                 }
                 h3 {
                     flex-basis: 18%;
-                    font-size: 14px;
+                    font-size: 2.8vw;
                 }
                 h4 {
-                    font-size: 11px;
+                    font-size: 2.6vw;
                     transform: translateY(-10px);
                 }
                 :nth-last-child(-n+2) {
@@ -441,16 +463,15 @@ body {
                         bottom: -10% !important;
                     }
                 }
-            }
-            aside#medlemmer > 
-            aside#medlemmer > h3, aside#medlemmer > h4 {
+            } 
+            aside#medlemmer > h4 {
                 margin: 0 !important;
             }
             h1 {
-                font-size: 35px;
+                font-size: 7.5vw !important;
             }
             h2 {
-                font-size: 25px;
+                font-size: 7vw;
             }
             #send button {
                 width: 200% !important;
