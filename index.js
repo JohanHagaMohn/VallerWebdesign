@@ -20,6 +20,7 @@ function hamburger() {
         })
     })
 }
+
 function form() {
     const submit = document.querySelector("#send").firstElementChild;
     submit.addEventListener("click", e => {
