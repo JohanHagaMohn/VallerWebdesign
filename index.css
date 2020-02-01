@@ -61,12 +61,12 @@ html {
   overflow-x: hidden;
 }
 
-html.menu {
+html.hamburger {
   overflow-y: hidden;
 }
 
-html.menu header {
-  height: 100vh;
+html.hamburger #kontakt {
+  z-index: -1 !important;
 }
 
 body header {
@@ -77,6 +77,18 @@ body header {
   left: 0;
   border-bottom: 1px solid #707070;
   background-color: white;
+}
+
+body header #menu > *:not(nav) {
+  display: none;
+}
+
+body header #menu {
+  width: 35%;
+}
+
+body header #menu nav {
+  width: 100%;
 }
 
 body header a {
@@ -102,12 +114,8 @@ body header div, body header nav {
   margin: 0 8% 0 8%;
 }
 
-body header div {
+body header #logo {
   width: 10%;
-}
-
-body header nav {
-  width: 40%;
 }
 
 body header li {
@@ -357,7 +365,7 @@ body footer h5:hover {
 }
 
 @media only screen and (min-width: 640px) and (max-width: 740px) {
-  html body header nav {
+  html body header #menu {
     width: 50%;
   }
   #email label span {
@@ -377,66 +385,143 @@ body footer h5:hover {
 }
 
 @media only screen and (max-width: 640px) {
-  html body header {
-    cursor: pointer;
-    z-index: 2;
-  }
-  html body header nav {
-    width: 7vh !important;
+  body header #menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    position: absolute;
-    right: 0%;
-    top: 4vh;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    position: relative;
   }
-  html body header nav, html body header nav::after, html body header nav::before {
-    -webkit-transition: all 100ms ease;
-    transition: all 100ms ease;
+  body header #menu, body header #menu input {
+    height: 100%;
+    width: 7vh;
+  }
+  body header #menu input {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  body header #menu input:checked ~ span:nth-of-type(1) {
+    -webkit-transform: rotate(45deg) scale(1.03);
+            transform: rotate(45deg) scale(1.03);
+  }
+  body header #menu input:checked ~ span:nth-of-type(2) {
+    opacity: 0;
+    -webkit-transform: scale(0.03, 0.03) translateX(-100%);
+            transform: scale(0.03, 0.03) translateX(-100%);
+  }
+  body header #menu input:checked ~ span:nth-of-type(3) {
+    -webkit-transform: rotate(-45deg) scale(1.03);
+            transform: rotate(-45deg) scale(1.03);
+  }
+  body header #menu input:checked ~ nav, body header #menu input:checked ~ nav ul {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+  }
+  body header #menu span {
+    display: block;
+    position: relative;
+    height: 4px;
+    width: calc(12*3px);
     background-color: #707070;
-    height: .5vh !important;
-    border-radius: 2px;
+    border-radius: 3px;
+    margin: 4px 0 4px 0;
+    -webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+    transition: opacity 300ms ease, -webkit-transform 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease, -webkit-transform 300ms ease;
   }
-  html body header nav::after, html body header nav::before {
-    content: "";
-    position: absolute;
-    width: 100%;
+  body header #menu span:nth-of-type(1) {
+    -webkit-transform-origin: 4px 8px;
+            transform-origin: 4px 8px;
   }
-  html body header nav::after {
-    top: -2vh;
+  body header #menu span:nth-of-type(3) {
+    -webkit-transform-origin: 4px -4px;
+            transform-origin: 4px -4px;
   }
-  html body header nav::before {
-    top: 2vh;
+  body header nav, body header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: none;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    position: fixed;
+    margin: 0;
+    left: 0;
+    top: 8vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
   }
-  html body header nav ul {
-    display: none;
+  body header nav ul {
+    background-image: url("media/skyer-mobil.svg");
+    background-repeat: no-repeat;
+    background-size: 60vh;
+    background-position: 10% -11%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-  html body header:hover > nav, html body header:hover > nav::after, html body header:hover > nav::before {
-    background-color: #022737;
+  body header nav ul a {
+    font-size: 25px !important;
   }
-  html body main {
+  body main {
         grid-template-areas: ". tjeneste     ." ". om           ." ". beskrivelse  ." ". medlemmer    ." ". kontakt      .";
     -ms-grid-columns: 10vw 80vw 10vw;
         grid-template-columns: 10vw 80vw 10vw;
     -ms-grid-rows: 92vh 20vh 40vh 40vh 96vh;
         grid-template-rows: 92vh 20vh 40vh 40vh 96vh;
   }
-  html body main #beskrivelse {
+  body main #tjeneste {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: tjeneste;
+  }
+  body main #om {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: om;
+  }
+  body main #medlemmer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: medlemmer;
+  }
+  body main #kontakt {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: kontakt;
+  }
+  body main #beskrivelse {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: beskrivelse;
     margin-bottom: 5vh;
     padding: 5vh;
   }
-  html body main #beskrivelse, html body main #skjema textarea {
+  body main #beskrivelse, body main #skjema textarea {
     border: 3px solid rgba(2, 83, 129, 0.75) !important;
   }
-  html body main #email label::after {
+  body main #email label::after {
     border-width: 1.5px !important;
   }
-  html body main aside#medlemmer {
+  body main aside#medlemmer {
     background-color: blue;
     width: 100%;
     margin: 0 0 5vh 0;
@@ -459,22 +544,22 @@ body footer h5:hover {
     position: relative;
     z-index: -1;
   }
-  html body main aside#medlemmer h3, html body main aside#medlemmer h4 {
+  body main aside#medlemmer h3, body main aside#medlemmer h4 {
     width: 50%;
     height: 20%;
     margin-top: -10px;
   }
-  html body main aside#medlemmer h3 {
+  body main aside#medlemmer h3 {
     -ms-flex-preferred-size: 18%;
         flex-basis: 18%;
     font-size: 14px;
   }
-  html body main aside#medlemmer h4 {
+  body main aside#medlemmer h4 {
     font-size: 11px;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
   }
-  html body main aside#medlemmer :nth-last-child(-n+2) {
+  body main aside#medlemmer :nth-last-child(-n+2) {
     position: absolute !important;
     bottom: 0 !important;
     left: 50%;
@@ -483,20 +568,20 @@ body footer h5:hover {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  html body main aside#medlemmer :nth-last-child(-n+2):not(h3) {
+  body main aside#medlemmer :nth-last-child(-n+2):not(h3) {
     bottom: -10% !important;
   }
-  html body main aside#medlemmer >
-aside#medlemmer > h3, html body main aside#medlemmer > h4 {
+  body main aside#medlemmer >
+aside#medlemmer > h3, body main aside#medlemmer > h4 {
     margin: 0 !important;
   }
-  html body main h1 {
+  body main h1 {
     font-size: 35px;
   }
-  html body main h2 {
+  body main h2 {
     font-size: 25px;
   }
-  html body main #send button {
+  body main #send button {
     width: 200% !important;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
